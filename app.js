@@ -6,10 +6,12 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import routes from "./lib/routes";
 import messages from "./lib/messages";
+import apikey from "./middleware/publickey";
 
 let app = express();
 
 app.use(cors())
+  .all(/^((?!aspublic|^\/$).)*$/, apikey)
   .use(bodyParser.json())
   .use(bodyParser.urlencoded({extended: true}))
   .use('/', routes);
