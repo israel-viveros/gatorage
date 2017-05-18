@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "db": {
+    "contactPoints": [
+      "localhost"
+    ],
+    "keyspace": "asd",
+    "maxPrepared": 5000,
+    "username": "dbuser",
+    "password": "Kupgyf56Sexwob03",
+    "queryOptions": {
+      "consistency": 6
+    }
+  },
+  "mail": {
+    "apikey": "96a6c24b-0f39-428e-b546-c3092b0b48d4",
+    "from": "noreply@asdeporte.com",
+    "enabled": false
+  }
+}

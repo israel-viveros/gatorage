@@ -5,6 +5,7 @@ import logger from "morgan";
 import cors from "cors";
 import bodyParser from "body-parser";
 import routes from "./lib/routes";
+import messages from "./lib/messages";
 
 let app = express();
 
