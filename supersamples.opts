@@ -1,0 +1,24 @@
+{
+  "baseUrl": "https://api.asdeporte.com",
+  "reporter": "spec",
+  "renderers": {
+    "html": {
+      "outputFolder": "docs",
+      "title": "Asdeporte",
+      "files": {
+        "docs/files/**": "."
+      },
+      "styles": [
+        "custom.css"
+      ]
+    },
+    "json": {
+      "outputFile": "docs/samples.json",
+      "includeBuffers": false
+    },
+    "markdown": {
+      "outputFile": "docs/samples.md",
+      "includeBuffers": false
+    }
+  }
+}
