@@ -1,0 +1,38 @@
+doctype html
+html(lang='es')
+  head
+    title Inscripciones Asdeporte
+    meta(charset='UTF-8')
+    meta(name='description', content='Asdeporte inscripciones')
+    meta(name='author', content='asdeporte.com')
+    meta(name='owner', content='Asdeporte')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1')
+    meta(name='HandheldFriendly', content='True')
+    meta(name='MobileOptimized', content='320')
+    meta(http-equiv='Cache-Control', content='no-store')
+    meta(http-equiv='Expires', content='0')
+    meta(http-equiv='Pragma', content='no-cache, must-revalidate, no-store')
+    meta(http-equiv='X-UA-Compatible', content='IE=Edge,chrome=1')
+    meta(name='robots', content='index, follow')
+    meta(name='googlebot', content='index, follow')
+    link(rel='stylesheet', href='/styles.css')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700', rel='stylesheet')
+  body
+    .asdBox
+      .asdTxtCenter
+        img(src="https://static.asdeporte.com/img/asd.svg")
+      h1  Medallas por distancia
+      ul.asdMedallas
+        each val, index in medallas
+          li
+            b #{index}
+            p #{val} unidades
+      h1  Corredores contemplados
+        ul.asdRunners
+          each val, index in participantes
+            li
+              p #{val[0].first_name} #{val[0].last_name} #{val[0].last_name2}
+              each val2 in val
+                b #{val2.event}
+
+

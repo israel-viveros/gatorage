@@ -7,8 +7,10 @@ import bodyParser from "body-parser";
 import routes from "./lib/routes";
 import messages from "./lib/messages";
 
-let app = express();
 
+let app = express();
+app.set('view engine', 'pug');
+app.use(express.static('public'))
 app.use(cors())
   .use(bodyParser.json())
   .use(bodyParser.urlencoded({extended: true}))
